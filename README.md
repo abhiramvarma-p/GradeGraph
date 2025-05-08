@@ -2,6 +2,11 @@
 
 A smart academic analytics platform that transforms student performance data into clear, interactive visual insights.
 
+[SoW](https://drive.google.com/file/d/1ZOIM5cEYixQsvBEghp3y_9otDu8nla4E/view?usp=drive_link)
+[SDD](https://drive.google.com/file/d/1olRytiBq8m3KkpcxNizXvdREFw9lBxvV/view?usp=sharing)
+[SRS](https://drive.google.com/file/d/1xs0WO8Q1LiJ7LOSNAkYCxrK5x4G8A0KE/view?usp=drive_link)
+[Test Plan](https://docs.google.com/spreadsheets/d/1ET3cEZaan31l9-zvAexy2OWZuRt-5wwq/edit?usp=drive_link&ouid=115756027884021264193&rtpof=true&sd=true)
+
 ---
 
 ## Key Features
