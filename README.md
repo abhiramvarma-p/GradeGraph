@@ -1,314 +1,151 @@
 # GradeGraph
 
-A comprehensive academic performance tracking and analytics system that provides real-time insights into student performance, grade analysis, and data visualization.
+A smart academic analytics platform that transforms student performance data into clear, interactive visual insights.
 
-![GradeGraph Banner](https://via.placeholder.com/1200x400?text=GradeGraph)
+---
 
-## Features
+## Key Features
 
-### For Students
-- Real-time performance tracking
-- Interactive grade analytics
-- Responsive dashboard
-- Course-wise performance analysis
-- Semester progress tracking
-- Secure grade access
+### Students
 
-### For Educators
-- Class performance analytics
-- Grade distribution visualization
-- Performance trend analysis
-- Batch-wise comparisons
-- Custom report generation
-- Secure grade management
+* View course-wise and semester-wise scores
+* Compare individual performance with batch averages
+* Clean, responsive dashboard
 
-### For Administrators
-- User management and role assignment
-- System configuration and settings
-- Database management and backup
-- System health monitoring
-- Audit logs and activity tracking
-- Batch operations and bulk updates
-- Advanced reporting and analytics
-- System maintenance tools
+### Educators
+
+* Visualize class performance trends
+* Analyze grade distributions
+* Identify at-risk students
+
+### Administrators
+
+* Manage users and roles
+* Monitor system usage and health
+* Audit logs and system configuration
+
+See the project in action: **[View Demo](https://drive.google.com/file/d/15EUPNXXzswFAHE00wobrWdmdHbXDv8Im/view?usp=drive_link)**
+
+---
 
 ## Getting Started
 
 ### Prerequisites
-- Node.js (v14 or higher)
-- MongoDB (v4.4 or higher)
-- npm or yarn
-- Git
-- Code editor (VS Code recommended)
-- MongoDB Compass (optional, for database management)
 
-### Detailed Installation Guide
+* Node.js (v14+), MongoDB (v4.4+), Git
 
-1. **System Requirements**
-   - Windows 10/11, macOS, or Linux
-   - Minimum 4GB RAM
-   - 2GB free disk space
-   - Modern web browser (Chrome, Firefox, or Edge)
+### Setup Instructions
 
-2. **Install Required Software**
-   ```bash
-   # Install Node.js from https://nodejs.org/
-   # Install MongoDB from https://www.mongodb.com/try/download/community
-   # Install Git from https://git-scm.com/downloads
-   ```
-
-3. **Clone the Repository**
-   ```bash
-   # Create a directory for the project
-   mkdir gradegraph
-   cd gradegraph
-
-   # Clone the repository
-   git clone https://github.com/yourusername/gradegraph.git .
-   ```
-
-4. **Set Up MongoDB**
-   ```bash
-   # Start MongoDB service
-   # Windows: MongoDB runs as a service
-   # macOS/Linux:
-   sudo service mongod start
-   # or
-   mongod --dbpath /path/to/data/directory
-   ```
-
-5. **Configure Environment Variables**
-   ```bash
-   # Create .env files in both frontend and backend directories
-   
-   # Frontend (.env)
-   REACT_APP_API_URL=http://localhost:5000
-   REACT_APP_ENV=development
-   REACT_APP_VERSION=1.0.0
-   
-   # Backend (.env)
-   PORT=5000
-   MONGODB_URI=mongodb://localhost:27017/gradegraph
-   JWT_SECRET=your_secure_jwt_secret
-   NODE_ENV=development
-   ```
-
-6. **Install Dependencies**
-   ```bash
-   # Install frontend dependencies
-   cd frontend
-   npm install
-   
-   # Install backend dependencies
-   cd ../backend
-   npm install
-   ```
-
-7. **Database Setup**
-   ```bash
-   # Create necessary indexes
-   cd backend
-   npm run setup-db
-   
-   # Seed initial data (optional)
-   npm run seed-data
-   ```
-
-8. **Start Development Servers**
-   ```bash
-   # Terminal 1 - Start backend server
-   cd backend
-   npm run dev
-   
-   # Terminal 2 - Start frontend server
-   cd frontend
-   npm start
-   ```
-
-9. **Verify Installation**
-   - Open browser and navigate to http://localhost:3000
-   - Check backend API at http://localhost:5000/api/health
-   - Verify MongoDB connection in backend logs
-
-### Common Issues and Solutions
-
-1. **Port Conflicts**
-   ```bash
-   # If port 3000 is in use, modify frontend port
-   # In frontend/.env
-   PORT=3001
-   ```
-
-2. **MongoDB Connection Issues**
-   - Ensure MongoDB service is running
-   - Check connection string in backend/.env
-   - Verify network firewall settings
-
-3. **Node.js Version Issues**
-   ```bash
-   # Check Node.js version
-   node -v
-   
-   # If needed, use nvm to switch versions
-   nvm install 14
-   nvm use 14
-   ```
-
-4. **Dependency Issues**
-   ```bash
-   # Clear npm cache
-   npm cache clean --force
-   
-   # Remove node_modules and reinstall
-   rm -rf node_modules
-   npm install
-   ```
-
-### Development Tools Setup
-
-1. **VS Code Extensions**
-   - ESLint
-   - Prettier
-   - MongoDB for VS Code
-   - React Developer Tools
-   - JavaScript and TypeScript Nightly
-
-2. **Browser Extensions**
-   - React Developer Tools
-   - Redux DevTools
-   - MongoDB Compass
-
-3. **API Testing**
-   - Install Postman or Insomnia
-   - Import API collection from `/docs/api-collection.json`
-
-## Tech Stack
-
-### Frontend
-- React.js
-- Material-UI
-- Redux
-- Recharts
-- Axios
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JWT Authentication
-
-### DevOps
-- Docker
-- AWS
-- Nginx
-- GitHub Actions
-
-## Project Structure
-```
-gradegraph/
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── contexts/
-│   │   ├── utils/
-│   │   └── App.js
-│   └── package.json
-├── backend/
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   └── utils/
-│   └── package.json
-└── docker/
-    ├── frontend.Dockerfile
-    └── backend.Dockerfile
-```
-
-## Security Features
-- JWT-based authentication
-- Role-based access control
-- Encrypted data transmission
-- Secure password hashing
-- XSS protection
-- Rate limiting
-
-## Testing
 ```bash
-# Run frontend tests
+# Clone the repository
+git clone https://github.com/yourusername/gradegraph.git
+cd gradegraph
+
+# Install backend
+dcd backend
+npm install
+
+# Install frontend
+cd ../frontend
+npm install
+
+# Start MongoDB service, then run:
+cd ../backend
+npm run dev
+
+# In a new terminal:
 cd frontend
-npm test
-
-# Run backend tests
-cd backend
-npm test
-```
-
-## Deployment
-
-### Docker Deployment
-```bash
-# Build and run with Docker Compose
-docker-compose up --build
-```
-
-### Manual Deployment
-```bash
-# Build frontend
-cd frontend
-npm run build
-
-# Start backend
-cd backend
 npm start
 ```
 
-## Team Members
-1. Frontend Lead Developer
-2. Frontend Developer
-3. Backend Developer
-4. Database & Security Engineer
-5. DevOps & Testing Engineer
+### Environment Variables
 
-## API Documentation
-API documentation is available at `/api-docs` when running the backend server.
+Create `.env` files:
 
-## Development Workflow
-1. Create feature branch
-2. Implement changes
-3. Write tests
-4. Submit pull request
-5. Code review
-6. Merge to main
+**Frontend (.env)**
 
-## Performance Optimization
-- Code splitting
-- Lazy loading
-- Database indexing
-- Query optimization
-- Response caching
-- Load balancing
+```
+REACT_APP_API_URL=http://localhost:5000
+```
 
-## Future Enhancements
-- AI-powered performance predictions
-- Mobile application
-- Advanced analytics dashboard
-- LMS integration
-- Batch processing capabilities
-- Custom report generation
+**Backend (.env)**
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/gradegraph
+JWT_SECRET=your_secret_key
+```
 
-## Acknowledgments
-- Material-UI for the component library
-- Recharts for data visualization
-- MongoDB for database
-- All contributors and team members
+### Running the Application
 
-## Support
-For support, email support@gradegraph.com or create an issue in the repository.
+1. Ensure MongoDB is installed and running locally.
+2. Clone the repository and install dependencies for both frontend and backend.
+3. Configure environment variables in `.env` files as shown above.
+4. Start the backend server using `npm run dev` inside the `backend` directory.
+5. Start the frontend using `npm start` inside the `frontend` directory.
+6. Open your browser and navigate to `http://localhost:3000` to use the application.
 
 ---
-GradeGraph Team 
+
+## Project Structure and Code Configuration
+
+The GradeGraph project follows a modular, fullstack architecture with clear separation of concerns:
+
+```
+gradegraph/
+├── frontend/                # React application (View layer)
+│   ├── src/
+│   │   ├── components/      # UI components grouped by role (student, educator, admin)
+│   │   ├── contexts/        # React Context API for global state (e.g., AuthContext)
+│   │   ├── utils/           # Helper functions and API utilities
+│   │   └── App.js           # Application entry point with routing
+│   └── package.json         # Frontend dependencies and scripts
+│
+├── backend/                 # Node.js + Express backend (Controller + Service layer)
+│   ├── src/
+│   │   ├── controllers/     # Route handlers (Controllers in MVC)
+│   │   ├── models/          # Mongoose schemas (Data layer)
+│   │   ├── routes/          # API route definitions
+│   │   └── utils/           # Middleware and shared logic
+│   └── package.json         # Backend dependencies and scripts
+```
+
+This structure promotes scalability and maintainability by keeping logic separated and organized.
+
+---
+
+## Security Highlights
+
+* JWT-based authentication
+* Role-based access control
+
+---
+
+## Tech Stack
+
+* Frontend: React, Material-UI, Recharts
+* Backend: Node.js, Express.js, MongoDB
+
+---
+
+## Demo
+
+Check out a working demo of GradeGraph:
+
+**View Demo Video**: [https://example.com/demo-link](https://drive.google.com/file/d/15EUPNXXzswFAHE00wobrWdmdHbXDv8Im/view?usp=drive_link)
+
+---
+
+## Team
+
+* Penumetsa Abhiram Varma – Fullstack Developer
+* Yeruva Suprith Reddy – Frontend Developer
+* Arnav Reddy Padamati – Backend Developer
+* Jaya Siddu Karthikeya – UI/UX Designer
+* Amarnath Reddy N – Tester and Documentation
+
+---
+
+## Future Enhancements
+
+* Export reports to PDF
