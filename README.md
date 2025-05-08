@@ -132,7 +132,7 @@ This structure promotes scalability and maintainability by keeping logic separat
 
 Check out a working demo of GradeGraph:
 
-**View Demo Video**: [https://example.com/demo-link](https://drive.google.com/file/d/15EUPNXXzswFAHE00wobrWdmdHbXDv8Im/view?usp=drive_link)
+**View Demo Video**: [Website Features](https://drive.google.com/file/d/15EUPNXXzswFAHE00wobrWdmdHbXDv8Im/view?usp=drive_link)
 
 ---
 
